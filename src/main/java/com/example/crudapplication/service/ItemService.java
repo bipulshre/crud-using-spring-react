@@ -2,9 +2,11 @@ package com.example.crudapplication.service;
 
 import com.example.crudapplication.model.Item;
 import com.example.crudapplication.repository.ItemRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ItemService {
     private final ItemRepository repository;
 
@@ -25,8 +27,8 @@ public class ItemService {
 
     public Item updateItem(Long id, Item updatedItem){
         Item item = getItemById(id);
-        item.setName(updatedItem.getName());
-        item.setDescription(updatedItem.getDescription());
+        item.setName("mobile");
+        item.setDescription("this is a mobile");
         return repository.save(item);
     }
 
