@@ -12,6 +12,10 @@ public class Item {
     private String name;
     private String description;
 
+    public long getId(){
+        return this.id;
+    }
+
     public String getName(){
         return this.name;
     }
